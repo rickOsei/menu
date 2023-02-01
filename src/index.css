@@ -1,13 +1,146 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #f1f5f8;
+}
+
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1170px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 95vw;
+  }
+}
+
+.menu {
+  padding: 5rem 0;
+}
+
+.title h1 {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 40px;
+  color: hsl(209, 61%, 16%);
+}
+
+.title .underline {
+  width: 70px;
+  height: 5px;
+  background: #c59d5f;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.btn-menu {
+  padding: 7px 10px;
+  background: transparent;
+  border: transparent;
+  border-radius: 0.25rem;
+  margin: 0 0.5rem;
+
+  cursor: pointer;
+  transition: all 0.4s linear;
+  font-size: 1rem;
+  color: #c59d5f;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.btn-menu:hover {
+  color: #f1f5f8;
+  background: #c59d5f;
+}
+
+.menu-sec {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+.dish {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+.dish img {
+  min-width: 225px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  border: 4px solid #c59d5f;
+  border-radius: 0.25rem;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px dotted gray;
+  padding-bottom: 5px;
+}
+
+.upper h4 {
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.price {
+  color: #c59d5f;
+}
+
+.info-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  color: hsl(209, 23%, 60%);
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .dish {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1rem;
+    max-width: 40rem;
+    margin-bottom: 5px;
+  }
+  .dish img {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-sec {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .dish img {
+    height: 150px;
+  }
 }
